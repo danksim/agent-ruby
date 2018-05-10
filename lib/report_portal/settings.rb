@@ -32,7 +32,7 @@ module ReportPortal
         glob.first
       end
 
-      @properties = filename.nil? ? {} : YAML.load_file(filename)
+      @properties = filename.nil? ? {} : YAML.safe_load(ERB.new(File.read('./report_portal.yml')).result)
       keys = {
         'uuid' => true,
         'endpoint' => true,

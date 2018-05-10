@@ -1,5 +1,5 @@
 require_relative 'formatter'
-require 'parallel_tests'
+# require 'parallel_tests'
 
 module ReportPortal
   module RSpec
